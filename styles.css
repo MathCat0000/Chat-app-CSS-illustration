@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
+
+/* Token layer purpose: design variables NOT layouts  */
 :root {
   --clr-text-heading: hsl(271, 36%, 24%);
   --clr-text-subheading: hsl(276, 100%, 81%);
@@ -30,6 +32,7 @@
   --phone-width: 15.4rem;
 }
 
+/* 2 Reset / Base Layer purpose: normalize box model, base sizing, default behavior */
 *,
 *::before,
 *::after {
@@ -40,6 +43,7 @@ html {
   font-size: 16px;
 }
 
+/* Page base box */
 body {
   margin: 0;
   min-height: 100vh;
@@ -60,7 +64,11 @@ input {
   font: inherit;
 }
 
-.hero {
+/* Page Composition Layer : purpose: global page layout, centering, decorative background shapes, responsive macro-composition */
+
+
+/* Full-screen layout wrapper and positioning context for background shapes */
+.hero { 
   position: relative;
   min-height: 100vh;
   display: grid;
@@ -70,6 +78,7 @@ input {
   isolation: isolate;
 }
 
+/* Left/Right Decorative background shape */
 .hero::before,
 .hero::after {
   content: "";
@@ -102,6 +111,7 @@ input {
   background: hsla(276, 100%, 81%, 0.08);
 }
 
+/* Main composition container for phone + text */
 .hero__container {
   width: min(100%, 70rem);
   display: grid;
@@ -109,6 +119,8 @@ input {
   gap: 4rem;
 }
 
+/* Primary Component Shell Layer purpose: create the phone object as a framed shell */
+/* Phone outer shell */
 .phone-card {
   position: relative;
   width: min(100%, var(--phone-width));
@@ -118,6 +130,7 @@ input {
   box-shadow: var(--shadow-phone);
 }
 
+/* Inner phone border effect */
 .phone-card::after {
   content: "";
   position: absolute;
@@ -127,6 +140,7 @@ input {
   pointer-events: none;
 }
 
+/* Notch decoration */
 .phone-notch {
   position: absolute;
   top: 0.05rem;
@@ -140,6 +154,9 @@ input {
   z-index: 2;
 }
 
+/* Header Subcomponent Layer purpose: top bar structure inside phone */
+
+/* Horizontal header layout inside phone */
 .phone-heading {
   display: flex;
   align-items: center;
@@ -204,6 +221,9 @@ input {
   color: var(--clr-text-subheading);
 }
 
+/* Chat Flow Layer purpose: vertical message stack and message alignment logic */
+
+/* Vertical stack for chat content */
 .phone-chat {
   display: flex;
   flex-direction: column;
@@ -214,6 +234,7 @@ input {
   border-bottom-right-radius: calc(var(--radius-phone) - 0.7rem);
 }
 
+/* Base message bubble box */
 .message {
   max-width: 8rem;
   padding: 0.45rem 0.55rem;
@@ -226,6 +247,7 @@ input {
   margin: 0;
 }
 
+/* left-aligned incoming variant */
 .message--incoming {
   align-self: flex-start;
   background-color: rgba(216, 158, 255, 0.14);
@@ -234,6 +256,7 @@ input {
   box-shadow: none;
 }
 
+/* right-aligned outgoing variant */
 .message--outgoing {
   align-self: flex-end;
   background-color: var(--clr-white);
@@ -244,6 +267,10 @@ input {
 .message--outgoing.short {
   max-width: fit-content;
 }
+
+/* Media Group Layer purpose: horizontal image row aligned to the outgoing side */
+
+/* right-aligned horizontal image row */
 
 .dog-images {
   display: flex;
@@ -259,6 +286,9 @@ input {
   border-radius: 0.65rem;
 }
 
+/* Interactive Option Layer purpose: booking row layout and internal alignment */
+
+/* horizontal booking row */
 .booking-message {
   display: flex;
   align-items: center;
@@ -295,6 +325,7 @@ input {
   line-height: 1;
 }
 
+/* Input Control Layer purpose: bottom input row layout */
 .message-input {
   display: flex;
   align-items: center;
@@ -335,6 +366,7 @@ input {
   flex-shrink: 0;
 }
 
+/* Content Block Layer purpose: descriptive content area outside phone */
 .text {
   width: min(100%, var(--content-max));
   text-align: center;
@@ -355,6 +387,7 @@ input {
   color: var(--clr-text-body);
 }
 
+/* Footer Utility Layer purpose: non-core footer text */
 .attribution {
   padding: 0 1rem 1.25rem;
   font-size: 0.6875rem;
@@ -366,6 +399,8 @@ input {
   color: hsl(228, 45%, 44%);
 }
 
+
+/* Responsive Override Layer purpose: change macro-layout, not rebuild everything */
 @media (min-width: 64rem) {
   .hero {
     padding: 0;

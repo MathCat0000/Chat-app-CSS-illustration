@@ -1,103 +1,504 @@
-# Frontend Mentor - Chat app CSS illustration
+# Frontend Mentor - Chat app CSS illustration solution
 
-![Design preview for the Chat app CSS illustration coding challenge](preview.jpg)
+This is a solution to the [Chat app CSS illustration challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY).
 
-## Welcome! 👋
+The project was used not only to complete the layout but as a **laboratory for knowledge extraction** focused on CSS architecture, layout reasoning, and Git workflow.
 
-Thanks for checking out this front-end coding challenge.
+---
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+# Table of contents
 
-**To do this challenge, you need a strong understanding of HTML and CSS.**
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [CSS Concepts Learned](#css-concepts-learned)
+  - [Git & Repository Setup](#git--repository-setup)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+
+---
+
+# Overview
 
 ## The challenge
 
-Your challenge is to build out this feature illustration using HTML & CSS and get it looking as close to the design as possible.
-
-The only assets we provide in this challenge are the image of the person in the app UI and the 3 images of the dog. You need to create everything else using HTML & CSS!
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- **Bonus**: See the chat interface animate on the initial load
+- Build a mobile chat interface illustration using CSS
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+The project includes:
 
-## Where to find everything
+- a hero layout
+- a simulated phone UI
+- message bubbles
+- gradients
+- decorative shapes
+- responsive typography
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+---
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+# Links
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+Solution URL  
+https://github.com/MathCat0000/Chat-app-CSS-illustration
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+Live Site URL  
+https://mathcat0000.github.io/Chat-app-CSS-illustration/
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+---
 
-## Using AI coding assistants
+# My process
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+## Built with
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+- Semantic HTML5
+- CSS Custom Properties
+- CSS Grid
+- CSS transforms
+- pseudo elements
+- responsive typography with `rem`
+- Git
+- GitHub Pages
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+---
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+# What I learned
 
-## Building your project
+This project was used as a **CSS architecture laboratory**.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+The focus was not only finishing the layout but extracting knowledge about:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- layout systems
+- CSS units
+- pseudo-elements
+- positioning mechanisms
+- design tokens
+- Git workflow
 
-## Deploying your project
+---
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+# CSS Concepts Learned
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## Layout primitives
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Before implementing styles the layout can be reduced to primitives:
 
-## Create a custom `README.md`
+```
+page
+ hero section
+  phone card
+   chat interface
+  text content
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Main layout system used:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```
+CSS Grid
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Example:
 
-## Submitting your solution
+```css
+.hero {
+  display: grid;
+  place-items: center;
+}
+```
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+This centers the entire hero content.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+---
 
-## Sharing your solution
+# Positioning system
 
-There are multiple places you can share your solution:
+### position: relative
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+Creates a **positioning reference**.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+Example:
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+```css
+.container {
+  position: relative;
+}
+```
 
-## Got feedback for us?
+This allows children with `position:absolute` to use the container as reference.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi@frontendmentor.io.
+---
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+### position: absolute
 
-**Have fun building!** 🚀
+Removes element from normal flow and allows free positioning.
+
+Example:
+
+```css
+.box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+```
+
+Coordinates are calculated relative to the **nearest positioned ancestor**.
+
+---
+
+### Positioning rule
+
+```
+relative → defines reference box
+absolute → positions element inside reference
+```
+
+---
+
+# Absolute vs Relative reference
+
+Example:
+
+```
+left:50%
+transform:translateX(-50%)
+```
+
+Interpretation:
+
+| Property         | Reference      |
+| ---------------- | -------------- |
+| left:50%         | parent         |
+| translateX(-50%) | element itself |
+
+This pattern is commonly used for **perfect centering**.
+
+---
+
+# translate() percentage behavior
+
+Percentages in `transform: translate()` are relative to **the element itself**, not its parent.
+
+Example:
+
+```
+translateX(-50%)
+```
+
+Means:
+
+```
+move left by 50% of element width
+```
+
+---
+
+# Pseudo-elements
+
+Example:
+
+```
+.phone-card::after
+```
+
+Pseudo-elements create **visual layers separate from structure**.
+
+Used when:
+
+- decoration should not affect layout
+- extra visual layers are needed
+- stacking order must be controlled
+
+Example:
+
+```css
+.phone-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+```
+
+---
+
+# ::before vs ::after
+
+Both behave similarly.
+
+| pseudo-element | insertion position |
+| -------------- | ------------------ |
+| ::before       | first child        |
+| ::after        | last child         |
+
+Choice depends on stacking order.
+
+---
+
+# CSS Custom Properties (Design Tokens)
+
+Example:
+
+```css
+:root {
+  --radius-phone: 2rem;
+  --shadow-phone: 0 20px 40px rgba(62, 39, 83, 0.18);
+}
+```
+
+These represent **reusable design tokens**.
+
+Tokens can represent:
+
+- colors
+- spacing
+- radius
+- shadows
+- layout sizes
+
+Example usage:
+
+```css
+.phone-card {
+  border-radius: var(--radius-phone);
+  box-shadow: var(--shadow-phone);
+}
+```
+
+---
+
+# box-shadow values
+
+Example:
+
+```
+0 20px 40px rgba(62,39,83,0.18)
+```
+
+Meaning:
+
+| value     | meaning           |
+| --------- | ----------------- |
+| 0         | horizontal offset |
+| 20px      | vertical offset   |
+| 40px      | blur radius       |
+| rgba(...) | color + opacity   |
+
+---
+
+# Why shadows use px
+
+Shadows use fixed units because they represent **visual effects**, not layout.
+
+Relative units would cause shadows to scale with typography.
+
+Best practice:
+
+```
+px → shadows, blur, borders
+rem → typography and spacing
+```
+
+---
+
+# rem units for typography
+
+Example:
+
+```css
+font-size: 1.5rem;
+```
+
+`rem` is relative to the **root font-size**.
+
+Benefits:
+
+- global scaling
+- accessibility
+- responsive typography
+
+Example:
+
+```
+html { font-size:18px }
+```
+
+All typography scales automatically.
+
+---
+
+# min-height vs min-width
+
+Example:
+
+```css
+body {
+  min-height: 100vh;
+}
+```
+
+Used to guarantee that the page fills the viewport height.
+
+`min-width` is rarely necessary because body width already follows viewport width.
+
+---
+
+# HSL color usage
+
+Example:
+
+```
+hsl(271,36%,24%)
+```
+
+HSL separates color into components:
+
+| value      | meaning      |
+| ---------- | ------------ |
+| hue        | color family |
+| saturation | intensity    |
+| lightness  | brightness   |
+
+Advantages:
+
+- easier color manipulation
+- easier palette consistency
+- easier reasoning about colors
+
+---
+
+# Avatar concept
+
+The term **avatar** in UI represents a visual representation of a user.
+
+Example:
+
+```
+<img class="avatar">
+```
+
+Origin:
+
+```
+Sanskrit: avatāra
+meaning manifestation or representation
+```
+
+In interfaces it represents:
+
+- user identity
+- chat sender
+- profile image
+
+---
+
+# Git & Repository Setup
+
+Local project folder:
+
+```
+chat-app-css-illustration-master
+```
+
+Initialize Git inside that folder:
+
+```bash
+git init
+git add .
+git commit -m "initial commit"
+```
+
+Connect repository:
+
+```bash
+git remote add origin https://github.com/MathCat0000/Chat-app-CSS-illustration.git
+```
+
+Push to GitHub:
+
+```bash
+git push -u origin main
+```
+
+---
+
+# Git ignore
+
+Example rule to ignore a personal folder:
+
+```
+/0/
+```
+
+Meaning:
+
+ignore folder named `0` in repository root.
+
+---
+
+# GitHub Pages URL rule
+
+Pages follow this pattern:
+
+```
+https://username.github.io/repository-name/
+```
+
+Example:
+
+```
+https://mathcat0000.github.io/Chat-app-CSS-illustration/
+```
+
+---
+
+# Continued development
+
+Topics to reinforce:
+
+- CSS positioning system
+- layout reasoning before implementation
+- separating structure and decoration
+- CSS architecture layers
+- design tokens usage
+- pseudo-element layering
+- Git workflow automation
+
+---
+
+# Useful resources
+
+Frontend Mentor  
+https://www.frontendmentor.io
+
+MDN CSS documentation  
+https://developer.mozilla.org/en-US/docs/Web/CSS
+
+---
+
+# AI Collaboration
+
+AI was used as a **conceptual debugging and learning tool**.
+
+Main uses:
+
+- understanding CSS layout mechanisms
+- clarifying positioning systems
+- explaining transform behavior
+- understanding design tokens
+- debugging Git issues
+- understanding GitHub Pages deployment
+
+The interaction functioned as a **knowledge extraction loop** rather than code generation.
+
+---
+
+# Author
+
+GitHub  
+https://github.com/MathCat0000

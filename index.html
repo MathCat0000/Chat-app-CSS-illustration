@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Chat-app-css-illustration-master</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="hero">
+      <div class="hero__container">
+        <div class="phone-card">
+          <div class="phone-notch"></div>
+
+          <header class="phone-heading">
+            <button class="back-button" aria-label="Go back">‹</button>
+            <img src="./images/avatar.jpg" alt="Samuel Green" class="avatar" />
+            <div class="contact-info">
+              <h2>Samuel Green</h2>
+              <p>Available to Walk</p>
+            </div>
+            <button class="menu-button" aria-label="More options">⋮</button>
+          </header>
+
+          <div class="phone-chat">
+            <div class="message message--incoming">
+              <p>That sounds great. I’d be happy with that.</p>
+            </div>
+
+            <div class="message message--incoming">
+              <p>Could you send over some pictures of your dog, please?</p>
+            </div>
+
+            <div class="dog-images">
+              <img src="./images/dog-image-1.jpg" alt="" />
+              <img src="./images/dog-image-2.jpg" alt="" />
+              <img src="./images/dog-image-3.jpg" alt="" />
+            </div>
+
+            <div class="message message--outgoing">
+              <p>Here are a few pictures. She’s a happy girl!</p>
+            </div>
+
+            <div class="message message--outgoing short">
+              <p>Can you make it?</p>
+            </div>
+
+            <div class="message message--incoming">
+              <p>
+                She looks so happy! The time we discussed works. How long shall
+                I take her out for?
+              </p>
+            </div>
+
+            <div class="booking-message">
+              <span class="booking-message__radio"></span>
+              <span class="booking-message__label">30 minute walk</span>
+              <span class="booking-message__price">$29</span>
+            </div>
+
+            <div class="booking-message">
+              <span class="booking-message__radio"></span>
+              <span class="booking-message__label">1 hour walk</span>
+              <span class="booking-message__price">$49</span>
+            </div>
+
+            <form class="message-input">
+              <input type="text" placeholder="Type a message…" />
+              <button type="submit" aria-label="Send message">›</button>
+            </form>
+          </div>
+        </div>
+
+        <section class="text">
+          <h1 class="title">Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/MathCat0000"
+        >Marcello Betti</a
+      >.
+    </div>
+  </body>
+</html>
